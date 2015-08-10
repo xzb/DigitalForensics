@@ -1,0 +1,18 @@
+/*
+ * mbr.cpp
+ *
+ *  Created on: Oct 28, 2014
+ *      Author: xiezebin
+ */
+
+#include "mbr.h"
+
+mbr::mbr() {
+	// TODO Auto-generated constructor stub
+
+}
+
+mbr::~mbr() {
+	// TODO Auto-generated destructor stub
+}
+

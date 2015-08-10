@@ -1,0 +1,11 @@
+Description: Column Number
+bg_block_bitmap: 1
+bg_node_bitmap: 2
+bg_node_table: 3
+bg_free_block_count: 4
+bg_free_inodes_count: 5
+bg_used_dirs_count: 6
+bg_pad: 7
+bg_reserved: 8
+
+1 4 0 0   |  11 4 0 0   |  21 4 0 0   |  6a 58   |  dc 8   |  4b 2   |  4 0   |  0 0 0 0 0 0 0 0 0 0 b2 4 

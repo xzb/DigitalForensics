@@ -1,0 +1,83 @@
++------------------------------------------------------------------------------+
+				EXT3_SUPER_BLOCK
++------------------------------------------------------------------------------+
+Total inode count    = 639584
+Block count    = 2556672
+Reserved block count  = 127833
+Free block count = 2478092
+Free inode count = 639568
+First data block = 0
+Block size = 1024 * 2^2 octets
+Fragment size =2
+Blocks per group count =32768
+Fragments per group count =32768
+Inode per group count =8096
++------------------------------------------------------------------------------+
+Last mounting operation timestamp =1416872033
+Mon Nov 24 17:33:53 2014
+Last writing operation timestamp =1416872033
+Mon Nov 24 17:33:53 2014
+Counter (times mounted)=2
+Authorized mount count before integrity checking =65535
+Magic Number =0xef53
+Status flag =1
+The filesystem is clean.
+Behaviour when detecting errors =1
+If an error is detected, the filesystem will continue to be used.
+Minimum compatible revision level (version)=0
+(Version using the original format.)
+Last check timestamp =1416871580
+Mon Nov 24 17:26:20 2014
+Maximum interval between checks = 0 secondes
+Creator OS =0
+Partition created by Linux.
+Current revision level (version)=1
+(Second version using dynamically sized inodes.)
++------------------------------------------------------------------------------+
+Default UID for reserved blocks =0
+Default GID for reserved blocks =0
+First non-reserved inode number =11
+Inode size = 256
+Superblock block number (being read)= 0
++------------------------------------------------------------------------------+
+Compatible features set = 0x003c
+This partition supports journalling.
+This partition supports extended user attirbutes.
+This partition supports variable-sized inodes.
+This partition supports directory indexing.
+Incompatible features set = 0x0006
+This partition does not support filetypes.
+This partition needs recovery.
+Read-Only Compatible features set = 0x0003
+This partition supports sparsefiles in read-only mode.
+This partition supports large files in read-only mode.
++------------------------------------------------------------------------------+
+UUID: 9c246b35-e5d9-4e34-82b-a4fd887f206c
+Volume name = ""
+Last mounted in directory "/home"
+Compression usage bitmap = 0
+Number of blocks to try to preallocate = 0
+Number of blocks to preallocate for directories = 0
++------------------------------------------------------------------------------+
+Journal UUID: 0000-00-00-00-000000
+Journal Inode number = 8
+Journal device number = 0
+Start of list of orphaned inodes to delete = 9443
+HTREE default hash seed = 176b0c79|54037e0|665f9a99|f1567914
+Hash default version = 1
+Default mount options = 12
+Support for extended user attributes.
+Support for Access Control Lists.
+First metablock block group = 0
+
+
++------------------------------------------------------------------------------+
+				EXT3_GROUP_DESCRIPTOR
++------------------------------------------------------------------------------+
+Block bitmap block (number)= 626
+Inode bitmap block number =  627
+First Inode table block number = 628
+Free blocks count (in this group) = 22049
+Free inodes count (in this group) = 8085
+Directories count (in this group) = 2
+

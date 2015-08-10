@@ -1,0 +1,53 @@
+Usage: ./ext3Viewer <FILESYSTEM> OPTION ARG1 [ ARG2 ... ]
+
+ Dumps and interprets informations about ext3 filesystems.
+ (in all this help, is the ext3 filesystem. ex: /dev/hda2)
+
+ <FILESYSTEM> is the ext3 filesystem to examinate, could be a device or
+                 a image file. eg: /dev/hda2, /dev/sda3, ./image.ext3
+
+ OPTION and ARGS are shown below :
+	-stats [ <block num> <block size> ]
+	                           info about the superblock and the group
+	                           descriptors. if you specify a block number
+	                           and a block size, it will read an alternate 
+	                           superblock. see -backups
+
+	-stat  <inode num>         show the inode structure contents
+	-bpoint  <block num>       display a block as a pointer of blocks
+	-printgd  <group num>      dump the group_desc structure of a group
+
+
+	-tree  <inode num>         show the form of an inode block allocation
+	-imap  <group_desc num>    print the inode bitmap as an array
+	-bmap  <group_desc num>    print the block bitmap as an array
+	-ffi                       find the first free inode thanks to the
+	                           bitmap
+	-ffb                       find the first free block
+
+
+	-cat  <inode num>  [ -x ]  dump the contents of a file.(read all the
+	                           blocks). -x for hexa.
+	-bcat  <block num> [ -x ]  dump the contents of a block.(read just one
+	                           block) -x for hexa.
+
+
+	-ls  <inode num>           print the directory entries of an inode.
+	                           the root has inode number 2.
+
+	-find  <inode_dir starting number> <regex pattern>
+	                           find files recursively from a given directory
+	                           that matches a regex pattern. for / type 2
+
+	-iname  <inode num>        find all the files that have the given inode
+
+	-backups                   calculate where the copies of the
+	                           superblock are
+
+
+	-jbd                       dump the journal contents.
+
+
+	-help                      display this help. see also the man page
+
+

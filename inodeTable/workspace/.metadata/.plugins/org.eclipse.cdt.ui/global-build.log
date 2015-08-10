@@ -1,0 +1,1082 @@
+
+**** Build of configuration Debug for project GroupBloc ****
+
+Nothing to build for project GroupBloc
+11:27:51 **** Build of configuration Debug for project SuperBlock ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+In file included from ../main.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../main.c: In function ‘main’:
+../main.c:42:5: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+     if ( close( fd ) == -1 )
+     ^
+../main.c:40:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret = read_superblock( fd, &sb );
+         ^
+../main.c: In function ‘read_superblock’:
+../main.c:54:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../main.c:60:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+Finished building: ../main.c
+ 
+Building target: SuperBlock
+Invoking: GCC C Linker
+gcc  -o "SuperBlock"  ./main.o   
+Finished building target: SuperBlock
+ 
+11:27:52 **** Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../mbr.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"mbr.d" -MT"mbr.d" -o "mbr.o" "../mbr.c"
+../mbr.c:9:54: fatal error: /root/Desktop/ext2utils/superblock/test5.h: Permission denied
+ #include "/root/Desktop/ext2utils/superblock/test5.h"
+                                                      ^
+compilation terminated.
+make: *** [mbr.o] Error 1
+11:28:10 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+
+**** Build of configuration Debug for project GroupBloc ****
+
+Nothing to build for project GroupBloc
+11:30:37 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+11:30:38 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../mbr.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"mbr.d" -MT"mbr.d" -o "mbr.o" "../mbr.c"
+../mbr.c:9:54: fatal error: /root/Desktop/ext2utils/superblock/test5.h: Permission denied
+ #include "/root/Desktop/ext2utils/superblock/test5.h"
+                                                      ^
+compilation terminated.
+make: *** [mbr.o] Error 1
+11:35:20 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+11:35:48 **** Incremental Build of configuration Debug for project GroupBloc ****
+make all 
+Building file: ../GBD.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"GBD.d" -MT"GBD.d" -o "GBD.o" "../GBD.c"
+../GBD.c: In function ‘main’:
+../GBD.c:40:3: warning: implicit declaration of function ‘strerror’ [-Wimplicit-function-declaration]
+   printf("\n%d",strerror(errno));
+   ^
+../GBD.c:49:2: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+  lseek(fp,offset,SEEK_CUR);
+  ^
+../GBD.c:52:2: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+  result = read (fp,buffer,32);
+  ^
+../GBD.c:53:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close(fp);
+  ^
+../GBD.c:77:7: warning: suggest parentheses around comparison in operand of ‘|’ [-Wparentheses]
+   if(i==4|i==8|i==12|i==14|i==16|i==18|i==20)
+       ^
+../GBD.c:77:17: warning: suggest parentheses around comparison in operand of ‘|’ [-Wparentheses]
+   if(i==4|i==8|i==12|i==14|i==16|i==18|i==20)
+                 ^
+../GBD.c:77:23: warning: suggest parentheses around comparison in operand of ‘|’ [-Wparentheses]
+   if(i==4|i==8|i==12|i==14|i==16|i==18|i==20)
+                       ^
+../GBD.c:77:29: warning: suggest parentheses around comparison in operand of ‘|’ [-Wparentheses]
+   if(i==4|i==8|i==12|i==14|i==16|i==18|i==20)
+                             ^
+../GBD.c:77:35: warning: suggest parentheses around comparison in operand of ‘|’ [-Wparentheses]
+   if(i==4|i==8|i==12|i==14|i==16|i==18|i==20)
+                                   ^
+../GBD.c:77:41: warning: suggest parentheses around comparison in operand of ‘|’ [-Wparentheses]
+   if(i==4|i==8|i==12|i==14|i==16|i==18|i==20)
+                                         ^
+../GBD.c:26:6: warning: unused variable ‘current_block’ [-Wunused-variable]
+  int current_block=0;
+      ^
+../GBD.c:85:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../GBD.c
+ 
+Building target: GroupBloc
+Invoking: GCC C Linker
+gcc  -o "GroupBloc"  ./GBD.o   
+Finished building target: GroupBloc
+ 
+11:35:48 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+11:35:49 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../mbr.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"mbr.d" -MT"mbr.d" -o "mbr.o" "../mbr.c"
+../mbr.c:9:54: fatal error: /root/Desktop/ext2utils/superblock/test5.h: Permission denied
+ #include "/root/Desktop/ext2utils/superblock/test5.h"
+                                                      ^
+compilation terminated.
+make: *** [mbr.o] Error 1
+11:36:05 **** Incremental Build of configuration Debug for project GroupBloc ****
+make all 
+make: Nothing to be done for `all'.
+11:36:09 **** Incremental Build of configuration Debug for project GroupBloc ****
+make all 
+make: Nothing to be done for `all'.
+12:06:24 **** Build of configuration Debug for project GroupBlock ****
+make all 
+Building target: GroupBlock
+Invoking: GCC C Linker
+gcc  -o "GroupBlock"  ./GBD.o   
+Finished building target: GroupBlock
+ 
+12:06:24 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+12:06:25 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../mbr.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"mbr.d" -MT"mbr.d" -o "mbr.o" "../mbr.c"
+../mbr.c:9:54: fatal error: /root/Desktop/ext2utils/superblock/test5.h: Permission denied
+ #include "/root/Desktop/ext2utils/superblock/test5.h"
+                                                      ^
+compilation terminated.
+make: *** [mbr.o] Error 1
+12:06:35 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:03:57 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:03:58 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:03:58 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:8:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../linux/ext3_fs.h: At top level:
+../linux/ext3_fs.h:247:2: error: unknown type name ‘uid_t’
+  uid_t s_resuid;
+  ^
+../linux/ext3_fs.h:248:2: error: unknown type name ‘gid_t’
+  gid_t s_resgid;
+  ^
+make: *** [inode.o] Error 1
+13:19:17 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:19:17 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:19:17 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:26:2: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+  ^
+../inode.c:28:43: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+  printf( "Total inode count    = %u\n", sb->s_inodes_count );
+                                           ^
+../inode.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [inode.o] Error 1
+13:22:12 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:22:13 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:22:13 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: At top level:
+../inode.c:15:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main( int argc, char** argv )
+      ^
+../inode.c: In function ‘main’:
+../inode.c:26:2: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+  ^
+../inode.c:28:43: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+  printf( "Total inode count    = %u\n", sb->s_inodes_count );
+                                           ^
+make: *** [inode.o] Error 1
+13:23:22 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:23:22 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:23:22 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: At top level:
+../inode.c:15:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main( int argc, char** argv )
+      ^
+../inode.c: In function ‘main’:
+../inode.c:26:2: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+  ^
+../inode.c:26:6: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+      ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:23:55 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:11 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:12 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:31 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:26:2: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+  ^
+../inode.c:26:6: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+      ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:24:34 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:24:34 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:24:35 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:38 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:39 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:40 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:40 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:41 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:47 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:24:48 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:24:50 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:24:52 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:53 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:54 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:55 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:58 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:59 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:24:59 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:01 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:03 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:23 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:26:2: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+  ^
+../inode.c:26:6: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  read( fd, sb, sizeof (struct ext3_super_block ));
+      ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:25:26 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:32 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:35 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:25:35 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+13:25:35 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:38 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:25:39 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:30:54 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: At top level:
+../inode.c:15:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main( int argc, char** argv )
+      ^
+../inode.c: In function ‘main’:
+../inode.c:27:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:27:16: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+                ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:30:59 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+make: Nothing to be done for `all'.
+13:33:55 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: At top level:
+../inode.c:16:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main( int argc, char** argv )
+      ^
+../inode.c: In function ‘main’:
+../inode.c:28:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:33:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:33:16: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+                ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:36:03 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: At top level:
+../inode.c:16:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main( int argc, char** argv )
+      ^
+../inode.c: In function ‘main’:
+../inode.c:28:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:33:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:33:16: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+                ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:37:01 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:28:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:33:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:33:16: warning: ‘sb’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if ( ( read( fd, sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+                ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+13:56:31 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:28:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:33:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:39:44: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+  printf( "Total inode count    = %u\n", &sb->s_inodes_count );
+                                            ^
+../inode.c:42:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+make: *** [inode.o] Error 1
+13:57:45 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:28:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:33:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:43:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+14:58:22 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+14:58:22 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+14:58:22 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:42:36: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+  printf( "s_log_block_size = " + sb->s_log_block_size );
+                                    ^
+../inode.c:60:35: error: invalid type argument of ‘->’ (have ‘struct ext3_group_desc’)
+     printf("bg_inode_bitmap = "+gd->bg_inode_bitmap);
+                                   ^
+../inode.c:61:35: error: invalid type argument of ‘->’ (have ‘struct ext3_group_desc’)
+     printf("bg_inode_bitmap = "+gd->bg_inode_table);
+                                   ^
+../inode.c:88:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:67:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+make: *** [inode.o] Error 1
+15:01:05 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:01:05 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:01:05 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:42:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf( "s_log_block_size = " + sb.s_log_block_size );
+  ^
+../inode.c:60:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf("bg_inode_bitmap = "+gd.bg_inode_bitmap);
+     ^
+../inode.c:61:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf("bg_inode_bitmap = "+gd.bg_inode_table);
+     ^
+../inode.c:88:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:67:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+15:01:49 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:01:49 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:01:49 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:42:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf( "s_log_block_size = %u\n" + sb.s_log_block_size );
+  ^
+../inode.c:60:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf("bg_inode_bitmap = %u\n"+gd.bg_inode_bitmap);
+     ^
+../inode.c:61:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf("bg_inode_bitmap = %u\n"+gd.bg_inode_table);
+     ^
+../inode.c:88:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:67:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+15:02:17 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:02:17 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:02:17 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:88:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:67:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+Finished building target: inodeTable
+ 
+15:07:28 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:07:28 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:07:28 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:12:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:33:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:38:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:90:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:69:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+./inode.o: In function `main':
+/home/xiezebin/workspace/inodeTable/Debug/../inode.c:43: undefined reference to `pow'
+collect2: error: ld returned 1 exit status
+make: *** [inodeTable] Error 1
+15:07:43 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:07:43 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:07:43 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:12:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:33:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:38:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:43:5: warning: implicit declaration of function ‘power’ [-Wimplicit-function-declaration]
+     int blockSize= 1024*power(2,sb.s_log_block_size);
+     ^
+../inode.c:90:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:69:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+./inode.o: In function `main':
+/home/xiezebin/workspace/inodeTable/Debug/../inode.c:43: undefined reference to `power'
+collect2: error: ld returned 1 exit status
+make: *** [inodeTable] Error 1
+15:09:38 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:09:38 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:09:38 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:12:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:33:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:38:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:90:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:69:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+./inode.o: In function `main':
+/home/xiezebin/workspace/inodeTable/Debug/../inode.c:43: undefined reference to `pow'
+collect2: error: ld returned 1 exit status
+make: *** [inodeTable] Error 1
+15:09:51 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:09:51 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:09:51 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+./inode.o: In function `main':
+/home/xiezebin/workspace/inodeTable/Debug/../inode.c:43: undefined reference to `pow'
+collect2: error: ld returned 1 exit status
+make: *** [inodeTable] Error 1
+15:09:54 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:09:54 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+15:09:54 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:12:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:33:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:38:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:44:2: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘double’ [-Wformat=]
+  printf( "s_log_block_size = %u\n", blockSize );  //4KB
+  ^
+../inode.c:90:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:69:20: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct ext3_inode inode;   //not * here
+                    ^
+Finished building: ../inode.c
+ 
+Building target: inodeTable
+Invoking: GCC C Linker
+gcc  -o "inodeTable"  ./inode.o   
+./inode.o: In function `main':
+/home/xiezebin/workspace/inodeTable/Debug/../inode.c:43: undefined reference to `pow'
+collect2: error: ld returned 1 exit status
+make: *** [inodeTable] Error 1
+23:11:32 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+23:11:32 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+23:11:32 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h:121:39: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+ # define EXT3_INODES_PER_GROUP(s) ((s)->s_inodes_per_group)
+                                       ^
+../inode.c:90:15: note: in expansion of macro ‘EXT3_INODES_PER_GROUP’
+     i_num_g = EXT3_INODES_PER_GROUP(sb)/32;
+               ^
+../linux/ext3_fs.h:82:56: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+ #define EXT3_BLOCK_SIZE(s)  (EXT3_MIN_BLOCK_SIZE << (s)->s_log_block_size)
+                                                        ^
+../inode.c:91:48: note: in expansion of macro ‘EXT3_BLOCK_SIZE’
+     if( lseek( fd, ((off_t) gd.bg_inode_table)*EXT3_BLOCK_SIZE(sb) +
+                                                ^
+../linux/ext3_fs.h:85:33: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+ #define EXT3_INODE_SIZE(s) (((s)->s_rev_level == EXT3_GOOD_OLD_REV) ? \
+                                 ^
+../inode.c:92:29: note: in expansion of macro ‘EXT3_INODE_SIZE’
+           ((off_t) i_num_g)*EXT3_INODE_SIZE(sb), SEEK_SET ) ==-1)
+                             ^
+../linux/ext3_fs.h:87:9: error: invalid type argument of ‘->’ (have ‘struct ext3_super_block’)
+      (s)->s_inode_size)
+         ^
+../inode.c:92:29: note: in expansion of macro ‘EXT3_INODE_SIZE’
+           ((off_t) i_num_g)*EXT3_INODE_SIZE(sb), SEEK_SET ) ==-1)
+                             ^
+../inode.c:110:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+make: *** [inode.o] Error 1
+00:23:15 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+00:42:32 **** Incremental Build of configuration Debug for project GroupBlock ****
+make all 
+make: Nothing to be done for `all'.
+00:42:32 **** Incremental Build of configuration Debug for project SuperBlock ****
+make all 
+make: Nothing to be done for `all'.
+00:42:32 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:107:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:45:6: warning: unused variable ‘i_bnum_g’ [-Wunused-variable]
+  int i_bnum_g= sb.s_inodes_per_group/(blockSize/inodeSize);
+      ^
+Finished building: ../inode.c
+ 
+Building file: ../inode1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode1.d" -MT"inode1.d" -o "inode1.o" "../inode1.c"
+../inode1.c:23:19: fatal error: inode.h: No such file or directory
+ #include "inode.h"
+                   ^
+compilation terminated.
+make: *** [inode1.o] Error 1

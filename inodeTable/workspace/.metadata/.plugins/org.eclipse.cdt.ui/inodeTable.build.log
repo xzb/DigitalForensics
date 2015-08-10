@@ -1,0 +1,39 @@
+00:42:32 **** Incremental Build of configuration Debug for project inodeTable ****
+make all 
+Building file: ../inode.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode.d" -MT"inode.d" -o "inode.o" "../inode.c"
+In file included from ../inode.c:11:0:
+../linux/ext3_fs.h: In function ‘ext3_mask_flags’:
+../linux/ext3_fs.h:176:2: warning: implicit declaration of function ‘S_ISDIR’ [-Wimplicit-function-declaration]
+  if (S_ISDIR(mode))
+  ^
+../linux/ext3_fs.h:178:2: warning: implicit declaration of function ‘S_ISREG’ [-Wimplicit-function-declaration]
+  else if (S_ISREG(mode))
+  ^
+../inode.c: In function ‘main’:
+../inode.c:32:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     if ( ( lseek( fd, BOOT_SECTOR_OFFSET, SEEK_SET ) ) == -1 )
+     ^
+../inode.c:37:5: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if ( ( read( fd, &sb, sizeof (struct ext3_super_block ) ) ) == -1 )
+     ^
+../inode.c:107:2: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+  close( fd );
+  ^
+../inode.c:45:6: warning: unused variable ‘i_bnum_g’ [-Wunused-variable]
+  int i_bnum_g= sb.s_inodes_per_group/(blockSize/inodeSize);
+      ^
+Finished building: ../inode.c
+ 
+Building file: ../inode1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inode1.d" -MT"inode1.d" -o "inode1.o" "../inode1.c"
+../inode1.c:23:19: fatal error: inode.h: No such file or directory
+ #include "inode.h"
+                   ^
+compilation terminated.
+make: *** [inode1.o] Error 1
+
+00:42:33 Build Finished (took 644ms)
+

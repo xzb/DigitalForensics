@@ -1,0 +1,48 @@
+s_log_block_size = 4096Byte
+bg_block_bitmap = 1025
+bg_inode_bitmap = 1041
+bg_inode_table = 1057
+i_mode = 32835
+i_uid = 0
+i_size = 98371
+i_atime = 163907
+i_ctime = 229443
+i_mtime = 294979
+i_dtime = 819267
+i_gid = 32835
+i_links_count = 13
+i_blocks = 1605699
+i_flags = 2654275
+i_generation = 0
+i_file_acl = 0
+i_dir_acl = 0
+i_faddr = 0
+i_extra_isize = 0
+i_pad1 = 0
+
+
+
+======NEXT Inode=============
+s_log_block_size = 4096Byte
+s_inode_size = 256Byte
+bg_block_bitmap = 1025
+bg_inode_bitmap = 1041
+bg_inode_table = 1057
+i_mode = 32836
+i_uid = 0
+i_size = 98372
+i_atime = 163908
+i_ctime = 229444
+i_mtime = 294980
+i_dtime = 819268
+i_gid = 32836
+i_links_count = 13
+i_blocks = 1605700
+i_flags = 2654276
+i_generation = 0
+i_file_acl = 0
+i_dir_acl = 0
+i_faddr = 0
+i_extra_isize = 0
+i_pad1 = 0
+

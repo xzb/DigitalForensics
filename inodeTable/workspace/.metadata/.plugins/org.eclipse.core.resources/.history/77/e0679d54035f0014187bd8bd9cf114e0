@@ -1,0 +1,17 @@
+/*
+ * mbr.h
+ *
+ *  Created on: Oct 28, 2014
+ *      Author: xiezebin
+ */
+
+#ifndef MBR_H_
+#define MBR_H_
+
+class mbr {
+public:
+	mbr();
+	virtual ~mbr();
+};
+
+#endif /* MBR_H_ */
